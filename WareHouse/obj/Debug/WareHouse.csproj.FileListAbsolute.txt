@@ -1,0 +1,15 @@
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\WareHouse.exe.config
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\WareHouse.exe
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\WareHouse.pdb
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\Tekla.Structures.dll
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\Tekla.Structures.Model.dll
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\Tekla.Structures.Datatype.dll
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\bin\Debug\Tekla.Technology.Scripting.dll
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.csproj.AssemblyReference.cache
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.Form1.resources
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.Properties.Resources.resources
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.csproj.GenerateResource.cache
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.csproj.CoreCompileInputs.cache
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.csproj.Up2Date
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.exe
+D:\IT\Software\C#\Tekla API\WareHouse\WareHouse\obj\Debug\WareHouse.pdb
