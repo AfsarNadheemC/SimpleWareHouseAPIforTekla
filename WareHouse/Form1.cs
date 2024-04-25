@@ -40,9 +40,39 @@ namespace WareHouse
             TSM.Model model = new TSM.Model();
             if (model.GetConnectionStatus())
             {
-                int length = Convert.ToInt32(textBox3.Text);
-                int width = Convert.ToInt32(textBox4.Text);
-                int height = Convert.ToInt32(textBox1.Text);
+                int length;
+                int width;
+                int height;
+
+                if (textBox1.Text == "")
+                {
+                    height = 5000;
+                }
+
+                else
+                {
+                    height = Convert.ToInt32(textBox1.Text);
+                }
+
+                if (textBox3.Text == "")
+                {
+                    length = 20000;
+                }
+
+                else
+                {
+                    length = Convert.ToInt32(textBox3.Text);
+                }
+
+                if (textBox4.Text == "")
+                {
+                    width = 10000;
+                }
+
+                else
+                {
+                    width = Convert.ToInt32(textBox4.Text);
+                }
 
                 int lengthPart = length / 3000;
                 
@@ -155,7 +185,7 @@ namespace WareHouse
                 TSG.Point point16 = new TSG.Point(0, length, height);
                 TSG.Point point17 = new TSG.Point(width, length, height);
 
-                TSM.Beam beam8 = new TSM.Beam(point12, point13);
+                TSM.Beam beam8 = new TSM.Beam(point16, point17);
 
                 beam8.Material.MaterialString = "IS2062";
                 beam8.Profile.ProfileString = "ISMB400";
@@ -164,8 +194,102 @@ namespace WareHouse
                 beam8.Insert();
                 model.CommitChanges();
 
+                TSM.ContourPlate contourPlate = new TSM.ContourPlate();
+
+                contourPlate.Profile.ProfileString = "PLT10";
+                contourPlate.Class = "4";
+                contourPlate.Material.MaterialString = "IS2062";
+
+                TSG.Point point18 = new TSG.Point(0,0,height);
+                TSG.Point point19 = new TSG.Point(width/2,0,height+(height/4));
+                TSG.Point point20 = new TSG.Point(width / 2, length, height + (height / 4));
+                TSG.Point point21 = new TSG.Point(0, length, height);
+
+                ContourPoint contourPoint = new ContourPoint(point19,null); 
+                ContourPoint contourPoint1 = new ContourPoint(point20,null);
+                ContourPoint contourPoint2 = new ContourPoint(point21,null);
+                ContourPoint contourPoint3 = new ContourPoint(point18,null);
+
+                contourPlate.AddContourPoint(contourPoint);
+                contourPlate.AddContourPoint(contourPoint1);
+                contourPlate.AddContourPoint(contourPoint2);
+                contourPlate.AddContourPoint(contourPoint3);
+
+                contourPlate.Insert();
+
+                TSM.ContourPlate contourPlate1 = new TSM.ContourPlate();
+                contourPlate1.Profile.ProfileString = "PLT10";
+                contourPlate1.Class = "4";
+                contourPlate1.Material.MaterialString = "IS2062";
+
+                TSG.Point point22 = new TSG.Point(width, 0, height);
+                TSG.Point point23 = new TSG.Point(width / 2, 0, height + (height / 4));
+                TSG.Point point24 = new TSG.Point(width / 2, length, height + (height / 4));
+                TSG.Point point25 = new TSG.Point(width, length, height);
+
+                ContourPoint contourPoint4 = new ContourPoint(point22, null);
+                ContourPoint contourPoint5 = new ContourPoint(point23, null);
+                ContourPoint contourPoint6 = new ContourPoint(point24, null);
+                ContourPoint contourPoint7 = new ContourPoint(point25, null);
+
+                contourPlate1.AddContourPoint(contourPoint4);
+                contourPlate1.AddContourPoint(contourPoint5);
+                contourPlate1.AddContourPoint(contourPoint6);
+                contourPlate1.AddContourPoint(contourPoint7);
+
+                contourPlate1.Insert();
+
+                TSM.ContourPlate contourPlate2 = new TSM.ContourPlate();
+
+                contourPlate2.Profile.ProfileString = "PLT10";
+                contourPlate2.Class = "4";
+                contourPlate2.Material.MaterialString = "IS2062";
+
+                TSG.Point point26 = new TSG.Point(0, 0, height);
+                TSG.Point point27 = new TSG.Point(width / 2, 0, height + (height / 4));
+                TSG.Point point28 = new TSG.Point(width , 0, height );
+
+                ContourPoint contourPoint8 = new ContourPoint(point26, null);
+                ContourPoint contourPoint9 = new ContourPoint(point27, null);
+                ContourPoint contourPoint10 = new ContourPoint(point28, null);
+
+
+                contourPlate2.AddContourPoint(contourPoint8);
+                contourPlate2.AddContourPoint(contourPoint9);
+                contourPlate2.AddContourPoint(contourPoint10);
+
+                contourPlate2.Insert();
+
+                TSM.ContourPlate contourPlate3 = new TSM.ContourPlate();
+                contourPlate3.Profile.ProfileString = "PLT10";
+                contourPlate3.Class = "4";
+                contourPlate3.Material.MaterialString = "IS2062";
+
+                TSG.Point point29 = new TSG.Point(0, length, height);
+                TSG.Point point30 = new TSG.Point(width / 2, length, height + (height / 4));
+                TSG.Point point31 = new TSG.Point(width, length, height);
+
+                ContourPoint contourPoint11 = new ContourPoint(point29, null);
+                ContourPoint contourPoint12 = new ContourPoint(point30, null);
+                ContourPoint contourPoint13 = new ContourPoint(point31, null);
+
+                contourPlate3.AddContourPoint(contourPoint11);
+                contourPlate3.AddContourPoint(contourPoint12);
+                contourPlate3.AddContourPoint(contourPoint13);
+
+                contourPlate3.Insert();
+
+                model.CommitChanges();
+
+
+
 
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
